@@ -76,6 +76,7 @@ static PyObject *get_threefold_tags_wrapper(PyObject *self, PyObject *args)
     long long int *inds_a = (long long int *)malloc(sizeA * sizeof(long long int));
     long long int *inds_b = (long long int *)malloc(sizeB * sizeof(long long int));
     long long int *inds_c = (long long int *)malloc(sizeC * sizeof(long long int));
+ 
     int count = get_threefolds(tagsA, tagsB, tagsC, sizeA, sizeB, sizeC, tcc, inds_a, inds_b, inds_c);
 
     // Convert indices array to Python object
